@@ -1,0 +1,268 @@
+
+/* quattrocento-sans-regular - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/quattrocento-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quattrocento-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* quattrocento-sans-italic - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/quattrocento-sans-v13-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quattrocento-sans-v13-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* quattrocento-sans-700 - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/quattrocento-sans-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quattrocento-sans-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* quattrocento-sans-700italic - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/quattrocento-sans-v13-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quattrocento-sans-v13-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* quattrocento-regular - latin */
+@font-face {
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/quattrocento-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quattrocento-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+
+/* ---------------------letyteseite--------------- */
+
+
+  :root{
+      --fs-main:#568669;
+      --fs-second:#855e47;
+      --fs-third:#3c2a1e;
+      --fs-fourth:#f5f4f4;
+  }
+
+body{
+font-family: 'Quattrocento Sans', sans-serif;
+color: var(--fs-third);
+font-size: 1em;
+}
+
+
+h1{
+  font-family: 'Quattrocento';
+  color: var(--fs-main);
+  font-size: 3em;
+}
+
+h2{
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: var(--fs-second);
+  font-size: 2em;
+}
+
+h3{
+  font-family: 'Quattrocento';
+  color: var(--fs-second);
+}
+
+.container-fluid{
+  max-width: 1200px;
+}
+
+h5{
+  font-size: 1.2em;
+}
+.kategorien{
+  color: #fff;
+  background-color: var(--fs-main);
+  width: 250px;
+  padding: 5px;
+  font-size: 2em;
+}
+
+#Kreativitaet{
+  background-color: var(--fs-fourth);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sagen{
+  font-family: 'Quattrocento Sans';
+  font-style: italic;
+  font-weight: 700;
+}
+
+.btn-dark {
+  width: 300px;
+  margin-left: auto;
+  color: #fff;
+  font-family: 'Quattrocento Sans', sans-serif;
+  background-color: var(--fs-main);
+  border-color: var(--fs-main);
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: var(--fs-second);
+  border-color: var(--fs-second);
+}
+
+
+.nav-link:hover {
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--fs-main);
+  font-size: 1.3em;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--fs-second);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--fs-second);
+}
+#stoerer{
+  background-color: var(--fs-main);
+  color: white;
+  font-size: 2vw;
+  font-weight: 700;
+  width: 60%;
+  height: auto;
+  padding: 25px ;
+  position: absolute;
+  right: 0;
+  top: 20px;
+
+}
+
+
+@media(min-width:1200px){
+  #stoerer{
+    font-size: 2em;
+  }
+  
+}
+#header{
+  position: relative;
+ 
+}
+
+
+#icon{
+  background-color: var(--fs-main);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+
+}
+#icon img {
+  /* display: block; */
+  padding: 0 10px;
+  width: 45px;
+}
+
+
+.btn-outline-light {
+  color: #f8f9fa;
+  border-color: var(--fs-main);
+}
+
+.btn-outline-light:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+
+/* --------------------------form */
+form{
+ max-width: 800px;
+  background-color: var(--fs-fourth);
+}
+
+.form-check-input:checked {
+  background-color: var(--fs-main);
+  border-color: var(--fs-main);
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--fs-main);
+  border-color: var(--fs-main);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--fs-second);
+  border-color: var(--fs-second);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--fs-second);
+  background-color: var(--fs-fourth);
+  
+}
+
+/* --------------------------table  */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: var(--fs-third);
+  --bs-table-striped-bg: var(--fs-fourth);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--fs-third);
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+
+#Tabellenkopf{
+  background-color: var(--fs-main);
+  color: white;
+}
+
+
+footer{
+  width: auto;
+  height: 150px;
+  background-color:  var(--fs-second);
+  margin-top: 20px;
+}
+li{
+  list-style-type:none;
+ 
+}
+.nav-link{
+  color:#fff;
+  font-size: 1em;
+  padding: 0px;
+  padding-top: 15px;
+
+}

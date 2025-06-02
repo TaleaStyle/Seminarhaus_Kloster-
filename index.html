@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="public/css/stylesheet.css">
+    <title>Seminaren Kloster Schwarzfels</title>
+  </head>
+  <body class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="das Seminaren Kloster ohne Schrift" width="70" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="public/angebot.html">Angebot </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="public/anmeldung.html">Anmeldung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="public/preisuebersicht.html">Preisübersicht</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="public/stimmen.html">Stimmen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="public/ausfluege.html">Ausflüge</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <!-- icon -->
+    <div id="icon">
+      <button type="button" class="btn btn-outline-light" id="toggle"><img src="assets/auge_icon.svg" alt="nicht hinsehen, durchgestrichenes Auge icon"></button>
+      <button type="button" class="btn btn-outline-light" id="kleiner"><img src="assets/schrift_verkleinen-weiss.svg" alt="Schriftgroesse verkleinern icon " ></button>
+      <button type="button" class="btn btn-outline-light" id="groesser"><img src="assets/schrift_große-weiss.svg" alt="Schriftgroesse verkleinern icon " ></button>
+    </div>
+    <!-- stoerer -->
+        <div id="header">
+                  <img src="assets/yoga_haltung.jpg" alt="mann in entspannter Yoga-Haltung sitzt " class="img-fluid">
+                  <div id="stoerer">
+                      <p>Atemholen in der Pandemie – Wir sind für Sie da!</p>
+                      <p>Das Seminarhaus Kloster Schwarzenfels ist weiter geöffnet. </p>
+                      <p> Achten Sie auf unsere speziellen Bedingungen. </p>
+                      <p>Wir freuen uns auf Sie – gerade jetzt.</p>
+                      <p>Bleiben Sie gesund.</p>
+                  </div>
+        </div>
+      <div >
+
+        <div class="row">
+            <div class="col-md-10 mt-5">
+              <h1>Durchatmen – entspannen – nachdenken</h1>
+              <h2>Seminarhaus Kloster Schwarzenfels</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 mt-2 mb-2">
+              <p>Nun ist es so weit: Nach den guten Erfahrungen im Probebetrieb starten wir im Jahr 2022 mit den ersten regelmäßigen Kursen zu Gesundheit, Kreativität und Stille. Unser Motto: „Auszeit-in-Schwarzenfels“. Wer Erholung, Entspannung und Abstand vom Alltag sucht, ist uns herzlich willkommen. Wir hoffen, Sie bald auf dem Klosterareal mit seinem modernen Seminarhaus als Gäste begrüßen zu dürfen – ganz unabhängig davon, welchen Glauben oder welche Weltanschauung Sie haben. Denn Gastfreundschaft ist seit Jahrhunderten ein Merkmal des Klosterlebens. </p>
+          </div>
+        </div>
+
+      </div>
+
+  <footer>
+    <nav class="navbar ">
+      <div id="navbarfooter">
+        <ul>
+          <li class="nav-item">
+              <a class="nav-link" href="public/kontakt.html">Kontakt | Impressum </a>
+            </li>
+        </ul>
+      </div>
+      
+    </nav>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    // schriftgroesse
+
+    let schriftgroesse = 17;
+
+
+    function schriftgroesseAendern(richtung) {
+        if (richtung == "groesser") {
+            schriftgroesse++;
+            document.querySelector("body").style.fontSize = schriftgroesse + "px";
+        }
+        if (richtung == "kleiner") {
+            schriftgroesse--;
+            document.querySelector("body").style.fontSize = schriftgroesse + "px";
+        }
+    }
+
+    document.getElementById("groesser").addEventListener("click", function() {
+        schriftgroesseAendern("groesser");
+    });
+
+    document.getElementById("kleiner").addEventListener("click", function() {
+        schriftgroesseAendern("kleiner");
+    });
+
+    //schwarzweiss--//
+
+    let schwarzweiss = false;
+
+            function toggle() {
+                if (!schwarzweiss) {
+                    document.querySelector("body").style.filter = "grayscale(1)";
+                    schwarzweiss = true;
+                } else {
+                    document.querySelector("body").style.filter = "none";
+                    schwarzweiss = false;
+                }
+                
+            }
+
+            document.getElementById("toggle").addEventListener("click", function() {
+                toggle();
+            });
+
+        
+</script>
+  </body>
+</html>

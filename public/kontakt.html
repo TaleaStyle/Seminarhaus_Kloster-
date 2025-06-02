@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Seminaren Kloster Schwarzfels</title>
+  </head>
+  <body class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../assets/logo.svg" alt="das Seminaren Kloster ohne Schrift" width="70" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="../index.html">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="angebot.html">Angebot </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="anmeldung.html">Anmeldung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="preisuebersicht.html">Preisübersicht</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="stimmen.html">Stimmen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ausfluege.html">Ausflüge</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+  </header>
+  <div id="icon">
+    <button type="button" class="btn btn-outline-light" id="toggle"><img src="../assets/auge_icon.svg" alt="nicht hinsehen, durchgestrichenes Auge icon"></button>
+    <button type="button" class="btn btn-outline-light" id="kleiner"><img src="../assets/schrift_verkleinen-weiss.svg" alt="Schriftgroesse verkleinern icon " ></button>
+    <button type="button" class="btn btn-outline-light" id="groesser"><img src="../assets/schrift_große-weiss.svg" alt="Schriftgroesse verkleinern icon " ></button>
+  </div>
+ <section class="container">
+  <img src="../assets/kontakt.jpg" alt="ein Bild vom Seminarhaus von oben" class="img-fluid mt-5">
+  <img src="../assets/logo.svg" alt="das Seminaren Kloster ohne Schrift" width="150" class="mt-5">
+
+  <div id="kontaktimpressum" class="mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Seminarhaus Kloster Schwarzenfels</h5>
+        <h5>Tel: 0751 123450</h5>
+        <h5> Fax: 0751 123459</h5>
+        <p>info@auszeit-in-schwarzenfels.de</p>
+        <p>www.auszeit-in-schwarzenfels.de</p>
+
+        </div>
+        <div class="col-md-6">
+          <h5>Geschäftsführung: Mechthild Mager</h5>
+          <p>Abteistraße </p>
+          <p>88214 Ravensburg</p>
+          <p>Amtsgericht Ravensburg, Handelsregister Nr. XXX111XXX</p>
+          <p> Finanzamt Ravensburg USt.ID: DE220111011</p>
+        </div>
+    </div>
+  </div>
+ </section>
+    
+ <footer >
+  <nav class="navbar">
+    <div id="navbarfooter">
+      <ul>
+        <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt | Impressum </a>
+          </li>
+      </ul>
+    </div>
+    
+  </nav>
+    
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+  // schriftgroesse
+
+  let schriftgroesse = 17;
+
+
+  function schriftgroesseAendern(richtung) {
+      if (richtung == "groesser") {
+          schriftgroesse++;
+          document.querySelector("body").style.fontSize = schriftgroesse + "px";
+      }
+      if (richtung == "kleiner") {
+          schriftgroesse--;
+          document.querySelector("body").style.fontSize = schriftgroesse + "px";
+      }
+  }
+
+  document.getElementById("groesser").addEventListener("click", function() {
+      schriftgroesseAendern("groesser");
+  });
+
+  document.getElementById("kleiner").addEventListener("click", function() {
+      schriftgroesseAendern("kleiner");
+  });
+
+  //schwarzweiss--//
+
+  let schwarzweiss = false;
+
+          function toggle() {
+              if (!schwarzweiss) {
+                  document.querySelector("body").style.filter = "grayscale(1)";
+                  schwarzweiss = true;
+              } else {
+                  document.querySelector("body").style.filter = "none";
+                  schwarzweiss = false;
+              }
+              
+          }
+
+          document.getElementById("toggle").addEventListener("click", function() {
+              toggle();
+          });
+
+      
+</script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+  
+</html>
